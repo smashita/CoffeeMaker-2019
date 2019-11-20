@@ -51,7 +51,7 @@ public class Main {
 				}
 		        if (userInput == 6) {
 					makeCoffee();
-				}
+        }
 		        if (userInput == 0) {
 					System.exit(0);
 				}

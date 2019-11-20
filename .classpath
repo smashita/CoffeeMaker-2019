@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="CoffeeMaker_JUnit/src"/>
+	<classpathentry kind="src" path="CoffeeMaker_JUnit/unittests"/>
+	<classpathentry kind="output" path="CoffeeMaker_JUnit/bin"/>
+</classpath>
