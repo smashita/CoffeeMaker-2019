@@ -12,7 +12,7 @@ public class Recipe {
     private int amtMilk;
     private int amtSugar;
     private int amtChocolate;
-    
+
     /**
      * Creates a default recipe for the coffee maker.
      */
@@ -78,7 +78,7 @@ public class Recipe {
     /**
 	 * @param amtMilk   The amtMilk to set.
 	 */
-    public void setAmtMilk(String milk) throws RecipeException{
+    public void setAmtMilk(String milk) throws RecipeException {
     	int amtMilk = 0;
     	try {
     		amtMilk = Integer.parseInt(milk);
@@ -123,7 +123,7 @@ public class Recipe {
 	 * @param name   The name to set.
 	 */
     public void setName(String name) {
-    	if(name != null) {
+    	if (name != null) {
     		this.name = name;
     	}
 	}
@@ -136,7 +136,7 @@ public class Recipe {
     /**
 	 * @param price   The price to set.
 	 */
-    public void setPrice(String price) throws RecipeException{
+    public void setPrice(String price) throws RecipeException {
     	int amtPrice = 0;
     	try {
     		amtPrice = Integer.parseInt(price);
@@ -168,18 +168,23 @@ public class Recipe {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
+		}
 		final Recipe other = (Recipe) obj;
 		if (name == null) {
-			if (other.name != null)
+			if (other.name != null) {
 				return false;
-		} else if (!name.equals(other.name))
+			}
+		} else if (!name.equals(other.name)) {
 			return false;
+		}
 		return true;
 	}
 
