@@ -9,7 +9,7 @@ import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
  */
 public class Inventory {
     
-    private static int coffee;
+    private static int coffee; /* 
     private static int milk;
     private static int sugar;
     private static int chocolate;
@@ -40,7 +40,7 @@ public class Inventory {
      * @param chocolate
      */
     public synchronized void setChocolate(int chocolate) {
-    	if(chocolate >= 0) {
+    	if (chocolate >= 0) {
     		Inventory.chocolate = chocolate;
     	}
         

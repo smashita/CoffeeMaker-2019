@@ -6,12 +6,12 @@ import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
  * @author Sarah Heckman
  */
 public class CoffeeMaker {
-	/** Array of recipes in coffee maker */
+	/** Array of recipes in coffee maker. */
 	private static RecipeBook recipeBook;
-	/** Inventory of the coffee maker */
+	/** Inventory of the coffee maker. */
     private static Inventory inventory;
 	
-    /**
+    /*
      * Constructor for the coffee maker
      *
      */
