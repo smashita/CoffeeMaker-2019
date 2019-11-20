@@ -275,7 +275,7 @@ public class Main {
     	int recipe = 0;
         try {
         	recipe = Integer.parseInt(userSelection) - 1;
-        	if (recipe >= 0 && recipe <=2) {
+        	if (recipe >= 0 && recipe <= 2) {
         		//do nothing here.
         	} else {
         		recipe = -1;
