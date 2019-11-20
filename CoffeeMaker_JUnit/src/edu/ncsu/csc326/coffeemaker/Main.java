@@ -54,7 +54,7 @@ public class Main {
         }
 		        if (userInput == 0) {
 					System.exit(0);
-				}
+		}
         	} else {
         		System.out.println("Please enter a number from 0 - 6");
             	mainMenu();
