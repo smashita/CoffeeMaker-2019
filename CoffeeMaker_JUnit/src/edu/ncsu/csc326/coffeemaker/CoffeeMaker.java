@@ -24,7 +24,7 @@ public class CoffeeMaker {
 	 * Returns true if the recipe is added to the
 	 * list of recipes in the CoffeeMaker and false
 	 * otherwise.
-	 * @param r
+	 * @param r recipe
 	 * @return boolean
 	 */
 	public boolean addRecipe(Recipe r) {
@@ -79,8 +79,8 @@ public class CoffeeMaker {
     /**
      * Returns the change of a user's beverage purchase, or
      * the user's money if the beverage cannot be made
-     * @param r
-     * @param amtPaid
+     * @param r recipe
+     * @param amtPaid amount to be paid
      * @return int
      */
     public synchronized int makeCoffee(int recipeToPurchase, int amtPaid) {
