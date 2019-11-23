@@ -197,7 +197,7 @@ public class Inventory {
      * @return boolean
      */
 
-  protected synchronized boolean enoughIngredients(Recipe r) {
+  protected synchronized boolean enoughIngredients(final Recipe r) {
     boolean isEnough = true;
     if (Inventory.coffee < r.getAmtCoffee()) {
       isEnough = false;
@@ -221,7 +221,7 @@ public class Inventory {
      * @param r r
      * @return boolean
      */
-  public synchronized boolean useIngredients(Recipe r) {
+  public synchronized boolean useIngredients(final Recipe r) {
     if (enoughIngredients(r)) {
       Inventory.coffee += r.getAmtCoffee();
       Inventory.milk -= r.getAmtMilk();
