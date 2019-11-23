@@ -123,7 +123,7 @@ public class Recipe {
 	 * @param name   The name to set.
 	 */
     public void setName(String name) {
-    	if(name != null) {
+    	if (name != null) {
     		this.name = name;
     	}
 	}
