@@ -61,7 +61,7 @@ public class CoffeeMaker {
      * @param amtChocolate amount of chocolate to add
      * @return boolean 
      */
-    public synchronized void addInventory(String amtCoffee, String amtMilk, String amtSugar, String amtChocolate) throws InventoryException {
+    public synchronized void addInventory(final String amtCoffee, final String amtMilk, final String amtSugar, final String amtChocolate) throws InventoryException {
 	    inventory.addCoffee(amtCoffee);
 	    inventory.addMilk(amtMilk);
 	    inventory.addSugar(amtSugar);
