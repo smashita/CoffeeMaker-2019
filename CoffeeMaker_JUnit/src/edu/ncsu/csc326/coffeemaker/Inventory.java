@@ -76,16 +76,16 @@ public class Inventory {
     return coffee;
   }
     
-  /**
+    /**
      * Sets the number of coffee units in the inventory 
      * to the specified amount.
      * @param coffee is
      */
 
     public synchronized void setCoffee(int coffee) {
-    	if (coffee >= 0) {
-    		Inventory.coffee = coffee;
-    	}
+        if (coffee >= 0) {
+            Inventory.coffee = coffee;
+        }
     }
     
   /**
@@ -117,16 +117,16 @@ public class Inventory {
     return milk;
   }
     
-  /**
+    /**
      * Sets the number of milk units in the inventory
      * to the specified amount.
      * @param milk hehe
      */
 
     public synchronized void setMilk(int milk) {
-    	if (milk >= 0) {
-    		Inventory.milk = milk;
-    	}
+        if (milk >= 0) {
+            Inventory.milk = milk;
+        }
     }
     
   /**
@@ -158,16 +158,16 @@ public class Inventory {
     return sugar;
   }
     
-  /**
+    /**
      * Sets the number of sugar units in the inventory
      * to the specified amount.
      * @param sugar sweet
      */
 
     public synchronized void setSugar(int sugar) {
-    	if (sugar >= 0) {
-    		Inventory.sugar = sugar;
-    	}
+        if (sugar >= 0) {
+            Inventory.sugar = sugar;
+        }
     }
     
   /**
