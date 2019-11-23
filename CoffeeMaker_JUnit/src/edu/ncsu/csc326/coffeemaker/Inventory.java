@@ -81,18 +81,12 @@ public class Inventory {
      * to the specified amount.
      * @param coffee is
      */
-<<<<<<< HEAD
+
     public synchronized void setCoffee(int coffee) {
     	if (coffee >= 0) {
     		Inventory.coffee = coffee;
     	}
-=======
-  public synchronized void setCoffee(int coffee) {
-    if (coffee >= 0) {
-      Inventory.coffee = coffee;
->>>>>>> branch 'master' of https://github.com/smashita/CoffeeMaker-2019.git
     }
-  }
     
   /**
      * Add the number of coffee units in the inventory 
@@ -128,18 +122,12 @@ public class Inventory {
      * to the specified amount.
      * @param milk hehe
      */
-<<<<<<< HEAD
+
     public synchronized void setMilk(int milk) {
     	if (milk >= 0) {
     		Inventory.milk = milk;
     	}
-=======
-  public synchronized void setMilk(int milk) {
-    if (milk >= 0) {
-      Inventory.milk = milk;
->>>>>>> branch 'master' of https://github.com/smashita/CoffeeMaker-2019.git
     }
-  }
     
   /**
      * Add the number of milk units in the inventory 
@@ -175,18 +163,12 @@ public class Inventory {
      * to the specified amount.
      * @param sugar sweet
      */
-<<<<<<< HEAD
+
     public synchronized void setSugar(int sugar) {
     	if (sugar >= 0) {
     		Inventory.sugar = sugar;
     	}
-=======
-  public synchronized void setSugar(int sugar) {
-    if (sugar >= 0) {
-      Inventory.sugar = sugar;
->>>>>>> branch 'master' of https://github.com/smashita/CoffeeMaker-2019.git
     }
-  }
     
   /**
      * Add the number of sugar units in the inventory 
@@ -214,28 +196,11 @@ public class Inventory {
      * @param r dd
      * @return boolean
      */
-<<<<<<< HEAD
-    protected synchronized boolean enoughIngredients(Recipe r) {
-        boolean isEnough = true;
-        if (Inventory.coffee < r.getAmtCoffee()) {
-            isEnough = false;
-        }
-        if (Inventory.milk < r.getAmtMilk()) {
-            isEnough = false;
-        }
-        if (Inventory.sugar < r.getAmtSugar()) {
-            isEnough = false;
-        }
-        if (Inventory.chocolate < r.getAmtChocolate()) {
-            isEnough = false;
-        }
-        return isEnough;
-=======
+
   protected synchronized boolean enoughIngredients(Recipe r) {
     boolean isEnough = true;
     if (Inventory.coffee < r.getAmtCoffee()) {
       isEnough = false;
->>>>>>> branch 'master' of https://github.com/smashita/CoffeeMaker-2019.git
     }
     if (Inventory.milk < r.getAmtMilk()) {
       isEnough = false;
