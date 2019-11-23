@@ -76,8 +76,8 @@ public class Recipe {
 		return amtMilk;
 	}
     /*
-	  @param amtMilk   The amtMilk to set.
-	 */
+    @param amtMilk   The amtMilk to set.
+    */
     public void setAmtMilk(final String milk) throws RecipeException {
     	int amtMilk = 0;
     	try {
