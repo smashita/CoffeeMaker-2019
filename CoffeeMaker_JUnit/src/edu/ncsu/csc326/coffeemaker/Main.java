@@ -7,7 +7,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
+/*
  * 
  * @author Sarah Heckman
  *
@@ -31,7 +31,8 @@ public class Main {
         
     //Get user input
     try {
-      int userInput = Integer.parseInt(inputOutput("Please press the number that corresponds to what you would like the coffee maker to do."));
+      int userInput = Integer.parseInt(inputOutput("Please press the"
+          + " number that corresponds to what you would like the coffee maker to do."));
       if (userInput >= 0 && userInput <= 6) {
         if (userInput == 1) {
           addRecipe();
@@ -221,7 +222,8 @@ public class Main {
         System.out.println((i + 1) + ". " + recipes[i].getName());
       }
     }
-    int recipeToPurchase = recipeListSelection("Please select the number of the recipe to purchase.");
+    int recipeToPurchase = recipeListSelection("Please select "
+        + "the number of the recipe to purchase.");
     String amountPaid = inputOutput("Please enter the amount you wish to pay");
     int amtPaid = 0;
     try {
@@ -234,7 +236,8 @@ public class Main {
     if (change == amtPaid) {
       System.out.println("Insufficient funds to purchase.");
     } else {
-      System.out.println("Thank you for purchasing " + coffeeMaker.getRecipes()[recipeToPurchase].getName());
+      System.out.println("Thank you for purchasing " 
+          + coffeeMaker.getRecipes()[recipeToPurchase].getName());
     }
     System.out.println("Your change is: " + change + "\n");
     mainMenu();
