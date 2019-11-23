@@ -2,7 +2,7 @@ package edu.ncsu.csc326.coffeemaker;
 
 import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
 
-/**
+/** coffee maker.
  * @author Sarah Heckman
  */
 public class CoffeeMaker {
@@ -12,7 +12,7 @@ public class CoffeeMaker {
   private static Inventory inventory;
 
   /**
-   * Constructor for the coffee maker
+   * Constructor for the coffee maker.
    *
    */
   public CoffeeMaker() {
@@ -24,7 +24,7 @@ public class CoffeeMaker {
    * Returns true if the recipe is added to the list of recipes in the CoffeeMaker
    * and false otherwise.
    * 
-   * @param r
+   * @param r recipe
    * @return boolean
    */
   public boolean addRecipe(Recipe r) {
@@ -35,7 +35,7 @@ public class CoffeeMaker {
    * Returns the name of the successfully deleted recipe or null if the recipe
    * cannot be deleted.
    * 
-   * @param recipeToDelete
+   * @param recipeToDelete recipe to delete
    * @return String
    */
   public String deleteRecipe(int recipeToDelete) {
@@ -46,8 +46,8 @@ public class CoffeeMaker {
    * Returns the name of the successfully edited recipe or null if the recipe
    * cannot be edited.
    * 
-   * @param recipeToEdit
-   * @param r
+   * @param recipeToEdit recipe to edit
+   * @param r recipe
    * @return String
    */
   public String editRecipe(int recipeToEdit, Recipe r) {
@@ -57,13 +57,13 @@ public class CoffeeMaker {
   /**
    * Returns true if inventory was successfully added
    * 
-   * @param amtCoffee
-   * @param amtMilk
-   * @param amtSugar
-   * @param amtChocolate
-   * @return boolean
+   * @param amtCoffee amount of coffee
+   * @param amtMilk amount of milk
+   * @param amtSugar amount of sugar
+   * @param amtChocolate amount of chocolate
    */
-  public synchronized void addInventory(String amtCoffee, String amtMilk, String amtSugar, String amtChocolate)
+  public synchronized void addInventory(String amtCoffee, 
+      String amtMilk, String amtSugar, String amtChocolate)
       throws InventoryException {
     inventory.addCoffee(amtCoffee);
     inventory.addMilk(amtMilk);
@@ -72,7 +72,7 @@ public class CoffeeMaker {
   }
 
   /**
-   * Returns the inventory of the coffee maker
+   * Returns the inventory of the coffee maker.
    * 
    * @return Inventory
    */
@@ -82,10 +82,10 @@ public class CoffeeMaker {
 
   /**
    * Returns the change of a user's beverage purchase, or the user's money if the
-   * beverage cannot be made
+   * beverage cannot be made.
    * 
-   * @param r
-   * @param amtPaid
+   * @param recipeToPurchase recipe
+   * @param amtPaid amount to pay
    * @return int
    */
   public synchronized int makeCoffee(int recipeToPurchase, int amtPaid) {
