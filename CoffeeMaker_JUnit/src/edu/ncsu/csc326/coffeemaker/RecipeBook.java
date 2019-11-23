@@ -11,7 +11,7 @@ public class RecipeBook {
 * Default constructor for a RecipeBook.
  */
   public RecipeBook() {
-    recipeArray = new Recipe[NUM_RECIPES];
+    recipeArray = new Recipe[numRecipes];
   }
 
   /**
