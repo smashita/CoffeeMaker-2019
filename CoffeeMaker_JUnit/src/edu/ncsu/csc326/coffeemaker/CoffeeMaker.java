@@ -6,9 +6,9 @@ import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
  * @author Sarah Heckman
  */
 public class CoffeeMaker {
-	/** Array of recipes in coffee maker */
+	/** Array of recipes in coffee maker. */
 	private static RecipeBook recipeBook;
-	/** Inventory of the coffee maker */
+	/** Inventory of the coffee maker. */
     private static Inventory inventory;
 	
     /**
@@ -45,8 +45,8 @@ public class CoffeeMaker {
 	/**
 	 * Returns the name of the successfully edited recipe
 	 * or null if the recipe cannot be edited.
-	 * @param recipeToEdit
-	 * @param r
+	 * @param recipeToEdit recipe to be editted
+	 * @param r recipe
 	 * @return String
 	 */
 	public String editRecipe(int recipeToEdit, Recipe r) {
@@ -55,11 +55,11 @@ public class CoffeeMaker {
     
     /**
      * Returns true if inventory was successfully added
-     * @param amtCoffee
-     * @param amtMilk
-     * @param amtSugar
-     * @param amtChocolate
-     * @return boolean
+     * @param amtCoffee amount of coffee to add
+     * @param amtMilk amount of milk to add
+     * @param amtSugar amount of sugar to add
+     * @param amtChocolate amount of chocolate to add
+     * @return boolean 
      */
     public synchronized void addInventory(String amtCoffee, String amtMilk, String amtSugar, String amtChocolate) throws InventoryException {
 	    inventory.addCoffee(amtCoffee);
