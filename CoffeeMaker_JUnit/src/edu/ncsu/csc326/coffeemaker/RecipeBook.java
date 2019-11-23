@@ -25,7 +25,7 @@ public class RecipeBook {
   /**
  * addRecipe.
  */
-  public synchronized boolean addRecipe(Recipe r) {
+  public synchronized boolean addRecipe(final Recipe r) {
     //Assume recipe doesn't exist in the array until 
     //find out otherwise
     boolean exists = false;
