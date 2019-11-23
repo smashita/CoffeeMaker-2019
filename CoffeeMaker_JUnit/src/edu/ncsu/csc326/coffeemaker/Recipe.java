@@ -31,8 +31,8 @@ public class Recipe {
     public int getAmtChocolate() {
 		return amtChocolate;
 	}
-    /**
-	 * @param amtChocolate   The amtChocolate to set.
+    /*
+	  @param amtChocolate   The amtChocolate to set.
 	 */
     public void setAmtChocolate(String chocolate) throws RecipeException {
     	int amtChocolate = 0;
@@ -53,10 +53,10 @@ public class Recipe {
     public int getAmtCoffee() {
 		return amtCoffee;
 	}
-    /**
-	 * @param amtCoffee   The amtCoffee to set.
+    /*
+	  @param amtCoffee   The amtCoffee to set.
 	 */
-    public void setAmtCoffee(String coffee) throws RecipeException {
+    public void setAmtCoffee(final String coffee) throws RecipeException {
     	int amtCoffee = 0;
     	try {
     		amtCoffee = Integer.parseInt(coffee);
@@ -75,8 +75,8 @@ public class Recipe {
     public int getAmtMilk() {
 		return amtMilk;
 	}
-    /**
-	 * @param amtMilk   The amtMilk to set.
+    /*
+	  @param amtMilk   The amtMilk to set.
 	 */
     public void setAmtMilk(String milk) throws RecipeException{
     	int amtMilk = 0;
@@ -97,8 +97,8 @@ public class Recipe {
     public int getAmtSugar() {
 		return amtSugar;
 	}
-    /**
-	 * @param amtSugar   The amtSugar to set.
+    /*
+	  @param amtSugar   The amtSugar to set.
 	 */
     public void setAmtSugar(String sugar) throws RecipeException {
     	int amtSugar = 0;
