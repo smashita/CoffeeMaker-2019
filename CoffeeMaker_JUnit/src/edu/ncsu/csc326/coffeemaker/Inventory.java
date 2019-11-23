@@ -219,6 +219,7 @@ public class Inventory {
      * recipe.  Assumes that the user has checked that there
      * are enough ingredients to make 
      * @param r r
+     * @return boolean
      */
   public synchronized boolean useIngredients(Recipe r) {
     if (enoughIngredients(r)) {
