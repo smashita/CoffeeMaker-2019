@@ -73,7 +73,7 @@ public class RecipeBook {
  * @param newRecipe do something
  * @return String
  */
-  public synchronized String editRecipe(int recipeToEdit, Recipe newRecipe) {
+  public synchronized String editRecipe(final int recipeToEdit, final Recipe newRecipe) {
     if (recipeArray[recipeToEdit] != null) {
       String recipeName = recipeArray[recipeToEdit].getName();
       newRecipe.setName("");
