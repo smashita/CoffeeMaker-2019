@@ -289,7 +289,7 @@ public class Main {
    * Starts the coffee maker program.
    * @param args represent arguments
    */
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     coffeeMaker = new CoffeeMaker();
     System.out.println("Welcome to the CoffeeMaker!\n");
     mainMenu();
