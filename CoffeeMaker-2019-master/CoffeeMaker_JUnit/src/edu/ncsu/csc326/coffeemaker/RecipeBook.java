@@ -16,7 +16,6 @@ public class RecipeBook {
 
   /**
    * Returns the recipe array.
-   * 
    * @return Recipe[]
    */
   public synchronized Recipe[] getRecipes() {
@@ -25,8 +24,9 @@ public class RecipeBook {
 
   /**
    * addRecipe.
+   * @return boolean
    */
-  public synchronized boolean addRecipe(Recipe r) {
+  public synchronized boolean addRecipe(final Recipe r) {
     // Assume recipe doesn't exist in the array until
     // find out otherwise
     boolean exists = false;
@@ -54,12 +54,11 @@ public class RecipeBook {
   /**
    * Returns the name of the recipe deleted at the position specified and null if
    * the recipe does not exist.
-   * 
    * @param recipeToDelete
    *          do something
    * @return String
    */
-  public synchronized String deleteRecipe(int recipeToDelete) {
+  public synchronized String deleteRecipe(final int recipeToDelete) {
     if (recipeArray[recipeToDelete] != null) {
       String recipeName = recipeArray[recipeToDelete].getName();
       recipeArray[recipeToDelete] = new Recipe();
