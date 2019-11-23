@@ -83,23 +83,24 @@ public class CoffeeMaker {
      * @param amtPaid amount to be paid
      * @return int
      */
-    public synchronized int makeCoffee(int recipeToPurchase, int amtPaid) {
-        int change = 0;
+  public synchronized int makeCoffee(int recipeToPurchase, int amtPaid) {
+    int change = 0;
         
-        if (getRecipes()[recipeToPurchase] == null) {
-        	change = amtPaid;
-        } else if (getRecipes()[recipeToPurchase].getPrice() <= amtPaid) {
-        	if (inventory.useIngredients(getRecipes()[recipeToPurchase])) {
-        		change = amtPaid - getRecipes()[recipeToPurchase].getPrice();
-        	} else {
-        		change = amtPaid;
-        	}
-        } else {
-        	change = amtPaid;
-        }
-        
-        return change;
+    if (getRecipes()[recipeToPurchase] == null) {
+      change = amtPaid;
+    } else if (getRecipes()[recipeToPurchase].getPrice() <= amtPaid) {
+      if (inventory.useIngredients(getRecipes()[recipeToPurchase])) {
+        change = amtPaid - getRecipes()[recipeToPurchase].getPrice();
+      } else {
+        change = amtPaid;
+      }
+    } else {
+      change = amtPaid;
     }
+        
+    return change;
+  }
+
 
 	/**
 	 * Returns the list of Recipes in the RecipeBook.
