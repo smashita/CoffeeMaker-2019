@@ -6,24 +6,24 @@ import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
  * @author   Sarah Heckman
  */
 public class Recipe {
-    private String name;
-    private int price;
-    private int amtCoffee;
-    private int amtMilk;
-    private int amtSugar;
-    private int amtChocolate;
+  private String name;
+  private int price;
+  private int amtCoffee;
+  private int amtMilk;
+  private int amtSugar;
+  private int amtChocolate;
     
     /**
      * Creates a default recipe for the coffee maker.
      */
-    public Recipe() {
-    	this.name = "";
-    	this.price = 0;
-    	this.amtCoffee = 0;
-    	this.amtMilk = 0;
-    	this.amtSugar = 0;
-    	this.amtChocolate = 0;
-    }
+  public Recipe() {
+    this.name = "";
+    this.price = 0;
+    this.amtCoffee = 0;
+    this.amtMilk = 0;
+    this.amtSugar = 0;
+    this.amtChocolate = 0;
+  }
     
     /**
 	 * @return   Returns the amtChocolate.
