@@ -37,7 +37,7 @@ public class Inventory {
   /**
      * Sets the number of chocolate units in the inventory
      * to the specified amount.
-     * @param chocolate hehe
+     * @param chocolate chocolate
      */
   public synchronized void setChocolate(int chocolate) {
     if (chocolate >= 0) {
