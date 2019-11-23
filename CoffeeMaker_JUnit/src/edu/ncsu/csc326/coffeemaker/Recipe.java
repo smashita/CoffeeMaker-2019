@@ -78,7 +78,7 @@ public class Recipe {
     /*
 	  @param amtMilk   The amtMilk to set.
 	 */
-    public void setAmtMilk(String milk) throws RecipeException{
+    public void setAmtMilk(final String milk) throws RecipeException {
     	int amtMilk = 0;
     	try {
     		amtMilk = Integer.parseInt(milk);
