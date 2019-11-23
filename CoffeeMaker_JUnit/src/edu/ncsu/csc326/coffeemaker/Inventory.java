@@ -14,7 +14,7 @@ public class Inventory {
   private static int sugar;
   private static int chocolate;
     
-  /*
+  /**
      * Creates a coffee maker inventory object and
      * fills each item in the inventory with 15 units.
      */
@@ -22,7 +22,8 @@ public class Inventory {
     setCoffee(15);
     setMilk(15);
     setSugar(15);
-    setChocolate(15);}
+    setChocolate(15); 
+  }
     
   /**
      * Returns the current number of chocolate units in 
@@ -126,11 +127,11 @@ public class Inventory {
     }
   }
     
-  /*
+  /**
      * Add the number of milk units in the inventory 
      * to the current amount of milk units.
-     * @param milk
-     * @throws InventoryException
+     * @param milk milk
+     * @throws InventoryException exception
      */
   public synchronized void addMilk(String milk) throws InventoryException {
     int amtMilk = 0;
@@ -166,11 +167,11 @@ public class Inventory {
     }
   }
     
-  /*
+  /**
      * Add the number of sugar units in the inventory 
      * to the current amount of sugar units.
-     * @param sugar
-     * @throws InventoryException
+     * @param sugar sugar
+     * @throws InventoryException exception
      */
   public synchronized void addSugar(String sugar) throws InventoryException {
     int amtSugar = 0;
