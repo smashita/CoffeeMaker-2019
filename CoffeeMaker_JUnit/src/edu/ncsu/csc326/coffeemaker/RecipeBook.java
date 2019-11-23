@@ -69,8 +69,8 @@ public class RecipeBook {
   /**
  * Returns the name of the recipe edited at the position specified
  * and null if the recipe does not exist.
- * @param recipeToEdit do somethog
- * @param newRecipe do omething
+ * @param recipeToEdit do something
+ * @param newRecipe do something
  * @return String
  */
   public synchronized String editRecipe(int recipeToEdit, Recipe newRecipe) {
