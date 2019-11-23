@@ -3,6 +3,7 @@ package edu.ncsu.csc326.coffeemaker;
 import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
 
 /**
+ * Inventory.
  * @author Sarah Heckman
  *
  *         Inventory for the coffee maker
@@ -37,7 +38,7 @@ public class Inventory {
   /**
    * Sets the number of chocolate units in the inventory to the specified amount.
    * 
-   * @param chocolate
+   * @param chocolate number of chocolate
    */
   public synchronized void setChocolate(int chocolate) {
     if (chocolate >= 0) {
@@ -50,8 +51,8 @@ public class Inventory {
    * Add the number of chocolate units in the inventory to the current amount of
    * chocolate units.
    * 
-   * @param chocolate
-   * @throws InventoryException
+   * @param chocolate number of chocolate
+   * @throws InventoryException exception message prompted to user 
    */
   public synchronized void addChocolate(String chocolate) throws InventoryException {
     int amtChocolate = 0;
@@ -79,7 +80,7 @@ public class Inventory {
   /**
    * Sets the number of coffee units in the inventory to the specified amount.
    * 
-   * @param coffee
+   * @param coffee number of coffee
    */
   public synchronized void setCoffee(int coffee) {
     if (coffee >= 0) {
@@ -91,8 +92,8 @@ public class Inventory {
    * Add the number of coffee units in the inventory to the current amount of
    * coffee units.
    * 
-   * @param coffee
-   * @throws InventoryException
+   * @param coffee number of coffee needed to be added
+   * @throws InventoryException exception message
    */
   public synchronized void addCoffee(String coffee) throws InventoryException {
     int amtCoffee = 0;
@@ -120,7 +121,7 @@ public class Inventory {
   /**
    * Sets the number of milk units in the inventory to the specified amount.
    * 
-   * @param milk
+   * @param milk number of milk
    */
   public synchronized void setMilk(int milk) {
     if (milk >= 0) {
@@ -132,8 +133,8 @@ public class Inventory {
    * Add the number of milk units in the inventory to the current amount of milk
    * units.
    * 
-   * @param milk
-   * @throws InventoryException
+   * @param milk number of milk
+   * @throws InventoryException exception message
    */
   public synchronized void addMilk(String milk) throws InventoryException {
     int amtMilk = 0;
@@ -161,7 +162,7 @@ public class Inventory {
   /**
    * Sets the number of sugar units in the inventory to the specified amount.
    * 
-   * @param sugar
+   * @param sugar number of sugar unit
    */
   public synchronized void setSugar(int sugar) {
     if (sugar >= 0) {
@@ -173,8 +174,8 @@ public class Inventory {
    * Add the number of sugar units in the inventory to the current amount of sugar
    * units.
    * 
-   * @param sugar
-   * @throws InventoryException
+   * @param sugar sugar
+   * @throws InventoryException exception message
    */
   public synchronized void addSugar(String sugar) throws InventoryException {
     int amtSugar = 0;
@@ -193,7 +194,7 @@ public class Inventory {
   /**
    * Returns true if there are enough ingredients to make the beverage.
    * 
-   * @param r
+   * @param r recipe
    * @return boolean
    */
   protected synchronized boolean enoughIngredients(Recipe r) {
@@ -217,7 +218,7 @@ public class Inventory {
    * Removes the ingredients used to make the specified recipe. Assumes that the
    * user has checked that there are enough ingredients to make
    * 
-   * @param r
+   * @param r recipe
    */
   public synchronized boolean useIngredients(Recipe r) {
     if (enoughIngredients(r)) {
