@@ -81,7 +81,7 @@ public class Inventory {
      * @param coffee
      */
     public synchronized void setCoffee(int coffee) {
-    	if(coffee >= 0) {
+    	if (coffee >= 0) {
     		Inventory.coffee = coffee;
     	}
     }
@@ -121,7 +121,7 @@ public class Inventory {
      * @param milk
      */
     public synchronized void setMilk(int milk) {
-    	if(milk >= 0) {
+    	if (milk >= 0) {
     		Inventory.milk = milk;
     	}
     }
@@ -161,7 +161,7 @@ public class Inventory {
      * @param sugar
      */
     public synchronized void setSugar(int sugar) {
-    	if(sugar >= 0) {
+    	if (sugar >= 0) {
     		Inventory.sugar = sugar;
     	}
     }
@@ -194,16 +194,16 @@ public class Inventory {
      */
     protected synchronized boolean enoughIngredients(Recipe r) {
         boolean isEnough = true;
-        if(Inventory.coffee < r.getAmtCoffee()) {
+        if (Inventory.coffee < r.getAmtCoffee()) {
             isEnough = false;
         }
-        if(Inventory.milk < r.getAmtMilk()) {
+        if (Inventory.milk < r.getAmtMilk()) {
             isEnough = false;
         }
-        if(Inventory.sugar < r.getAmtSugar()) {
+        if (Inventory.sugar < r.getAmtSugar()) {
             isEnough = false;
         }
-        if(Inventory.chocolate < r.getAmtChocolate()) {
+        if (Inventory.chocolate < r.getAmtChocolate()) {
             isEnough = false;
         }
         return isEnough;
