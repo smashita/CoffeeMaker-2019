@@ -22,7 +22,7 @@ public class CoffeeMakerTest extends TestCase {
 
     // Set up for r1
     r1 = new Recipe();
-    r1.setName("Coffee");
+    r1.setName("Mochaa");
     r1.setAmtChocolate("0");
     r1.setAmtCoffee("3");
     r1.setAmtMilk("1");
@@ -31,7 +31,7 @@ public class CoffeeMakerTest extends TestCase {
 
     // Set up for r2
     r2 = new Recipe();
-    r2.setName("Mocha");
+    r2.setName("Frappe");
     r2.setAmtChocolate("20");
     r2.setAmtCoffee("3");
     r2.setAmtMilk("1");
@@ -61,7 +61,11 @@ public class CoffeeMakerTest extends TestCase {
 
   /**
    * Add "4", "7", "0", "9" to the inventory
-   * If fail, "InventoryException should not be thrown" will be appended in the failure message. 
+   * If fail, "InventoryException should not be thrown" will be appended in the failure message.
+   *  @param amtCoffee.
+	 * @param amtMilk.
+	 * @param amtSuga.
+	 * @param amtChocolate. 
    */
   public void testAddInventory() {
     try {
