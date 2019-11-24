@@ -55,7 +55,7 @@ public class CoffeeMaker {
   }
 
   /**
-   * Returns true if inventory was successfully added
+   * Returns true if inventory was successfully added.
    * 
    * @param amtCoffee amount of coffee
    * @param amtMilk amount of milk
