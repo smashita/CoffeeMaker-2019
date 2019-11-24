@@ -2,29 +2,34 @@ package edu.ncsu.csc326.coffeemaker;
 
 public class RecipeBook {
 
-  /** Array of recipes in coffee maker.*/
-  private Recipe [] recipeArray;
-  /** Number of recipes in coffee maker.*/
-  private final int numRecipes  = 4; 
+  /**
+   * Array of recipes in coffee maker.
+   */
+  private Recipe[] recipeArray;
+  /**
+   * Number of recipes in coffee maker.
+   */
+  private final int numRecipes = 4;
 
   /**
-* Default constructor for a RecipeBook.
- */
+   * Default constructor for a RecipeBook.
+   */
   public RecipeBook() {
     recipeArray = new Recipe[numRecipes];
   }
 
   /**
- * Returns the recipe array.
- * @return Recipe[]
- */
+   * Returns the recipe array.
+   *
+   * @return Recipe[]
+   */
   public synchronized Recipe[] getRecipes() {
     return recipeArray;
   }
-  
+
   /**
- * addRecipe.
- */
+   * addRecipe.
+   */
   public synchronized boolean addRecipe(final Recipe r) {
     //Assume recipe doesn't exist in the array until 
     //find out otherwise
@@ -51,11 +56,12 @@ public class RecipeBook {
   }
 
   /**
- * Returns the name of the recipe deleted at the position specified
- * and null if the recipe does not exist.
- * @param recipeToDelete do something
- * @return String
- */
+   * Returns the name of the recipe deleted at the position specified
+   * and null if the recipe does not exist.
+   *
+   * @param recipeToDelete do something
+   * @return String
+   */
   public synchronized String deleteRecipe(int recipeToDelete) {
     if (recipeArray[recipeToDelete] != null) {
       String recipeName = recipeArray[recipeToDelete].getName();
@@ -67,12 +73,13 @@ public class RecipeBook {
   }
 
   /**
- * Returns the name of the recipe edited at the position specified
- * and null if the recipe does not exist.
- * @param recipeToEdit do something
- * @param newRecipe do something
- * @return String
- */
+   * Returns the name of the recipe edited at the position specified
+   * and null if the recipe does not exist.
+   *
+   * @param recipeToEdit do something
+   * @param newRecipe    do something
+   * @return String
+   */
   public synchronized String editRecipe(final int recipeToEdit, final Recipe newRecipe) {
     if (recipeArray[recipeToEdit] != null) {
       String recipeName = recipeArray[recipeToEdit].getName();

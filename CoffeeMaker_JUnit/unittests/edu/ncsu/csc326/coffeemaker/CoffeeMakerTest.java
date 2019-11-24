@@ -3,14 +3,14 @@ package edu.ncsu.csc326.coffeemaker;
 import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
 import junit.framework.TestCase;
 
-  /*
-   * 
-   * @author Sarah Heckman
-   *
-   * Unit tests for CoffeeMaker class.
-   */
+/*
+ *
+ * @author Sarah Heckman
+ *
+ * Unit tests for CoffeeMaker class.
+ */
 public class CoffeeMakerTest extends TestCase {
-	
+
   private CoffeeMaker cm;
   private Recipe r1;
   private Recipe r2;
@@ -46,39 +46,39 @@ public class CoffeeMakerTest extends TestCase {
     r3.setAmtMilk("3");
     r3.setAmtSugar("1");
     r3.setPrice("100");
-	
-	//Set up for r4
-	r4 = new Recipe();
-	r4.setName("Hot Chocolate");
-	r4.setAmtChocolate("4");
-	r4.setAmtCoffee("0");
-	r4.setAmtMilk("1");
-	r4.setAmtSugar("1");
-	r4.setPrice("65");
-	
-	super.setUp();
-}
-	
-	public void testAddInventory() {
-		try {
-			cm.addInventory("4","7","0","9");
-		} catch (InventoryException e) {
-			fail("InventoryException should not be thrown");
-	}
-	}
-	
-	public void testAddInventoryException() {
-		try {
-			cm.addInventory("4", "-1", "asdf", "3");
-			fail("InventoryException should be thrown");
-		} catch (InventoryException e) {
-			//success if thrown
+
+    //Set up for r4
+    r4 = new Recipe();
+    r4.setName("Hot Chocolate");
+    r4.setAmtChocolate("4");
+    r4.setAmtCoffee("0");
+    r4.setAmtMilk("1");
+    r4.setAmtSugar("1");
+    r4.setPrice("65");
+
+    super.setUp();
+  }
+
+  public void testAddInventory() {
+    try {
+      cm.addInventory("4", "7", "0", "9");
+    } catch (InventoryException e) {
+      fail("InventoryException should not be thrown");
     }
-	}
-	
-	public void testMakeCoffee() {
-		cm.addRecipe(r1);
-		assertEquals(25, cm.makeCoffee(0, 75));
-	}
+  }
+
+  public void testAddInventoryException() {
+    try {
+      cm.addInventory("4", "-1", "asdf", "3");
+      fail("InventoryException should be thrown");
+    } catch (InventoryException e) {
+      //success if thrown
+    }
+  }
+
+  public void testMakeCoffee() {
+    cm.addRecipe(r1);
+    assertEquals(25, cm.makeCoffee(0, 75));
+  }
 
 }
