@@ -43,7 +43,7 @@ public class Recipe {
    *          The amtChocolate to set.
    */
   public void setAmtChocolate(String chocolate) throws RecipeException {
-    int amtChocolate = 0;
+    int amtChocolate;
     try {
       amtChocolate = Integer.parseInt(chocolate);
     } catch (NumberFormatException e) {

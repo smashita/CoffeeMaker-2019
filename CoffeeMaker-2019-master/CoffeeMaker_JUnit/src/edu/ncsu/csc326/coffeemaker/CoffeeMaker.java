@@ -21,7 +21,8 @@ public class CoffeeMaker {
   }
 
   /**
-   * Returns true if the recipe is added to the list of recipes in the CoffeeMaker
+   * Returns true if the recipe is added to
+   * the list of recipes in the CoffeeMaker
    * and false otherwise.
    * 
    * @param r recipe
@@ -56,7 +57,6 @@ public class CoffeeMaker {
 
   /**
    * Returns true if inventory was successfully added.
-   * 
    * @param amtCoffee amount of coffee
    * @param amtMilk amount of milk
    * @param amtSugar amount of sugar
