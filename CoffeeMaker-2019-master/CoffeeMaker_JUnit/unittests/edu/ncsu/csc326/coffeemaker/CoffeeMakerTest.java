@@ -59,6 +59,10 @@ public class CoffeeMakerTest extends TestCase {
     super.setUp();
   }
 
+  /**
+   * Add "4", "7", "0", "9" to the inventory
+   * If fail, "InventoryException should not be thrown" will be appended in the failure message. 
+   */
   public void testAddInventory() {
     try {
       cm.addInventory("4", "7", "0", "9");
@@ -67,6 +71,10 @@ public class CoffeeMakerTest extends TestCase {
     }
   }
 
+  /**
+   * Add "4", "-1", "asdf", "3" to the inventory
+   * If fail, "InventoryException should be thrown" will be appended in the failure message. 
+   */
   public void testAddInventoryException() {
     try {
       cm.addInventory("4", "-1", "asdf", "3");
