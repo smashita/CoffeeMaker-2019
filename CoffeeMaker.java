@@ -24,7 +24,7 @@ public class CoffeeMaker {
 	 * Returns true if the recipe is added to the
 	 * list of recipes in the CoffeeMaker and false
 	 * otherwise.
-	 * @param r represents true/false value if recipe added/not
+	 * @param r 
 	 * @return boolean
 	 */
 	public boolean addRecipe(Recipe r) {
@@ -34,7 +34,7 @@ public class CoffeeMaker {
 	/**
 	 * Returns the name of the successfully deleted recipe
 	 * or null if the recipe cannot be deleted.
-	 * @param recipeToDelete represents function that return name of recipe succefully deleted.
+	 * @param recipeToDelete 
 	 * @return String 
 	 */
 	public String deleteRecipe(int recipeToDelete) {
@@ -44,7 +44,7 @@ public class CoffeeMaker {
 	/**
 	 * Returns the name of the successfully edited recipe
 	 * or null if the recipe cannot be edited.
-	 * @param recipeToEdit represents function of edited recipe
+	 * @param recipeToEdit 
 	 * @param r 
 	 * @return String
 	 */
@@ -54,10 +54,10 @@ public class CoffeeMaker {
     
     /**
      * Returns true if inventory was successfully added.
-     * @param amtCoffee represents function to + Coffee
-     * @param amtMilk represents function to + Milk
-     * @param amtSugar represents function to + Sugar
-     * @param amtChocolate represents function to + Chocolate
+     * @param amtCoffee 
+     * @param amtMilk 
+     * @param amtSugar 
+     * @param amtChocolate 
      * @return boolean 
      */
     public synchronized void addInventory(String amtCoffee, String amtMilk, String amtSugar, String amtChocolate) throws InventoryException {
@@ -79,7 +79,7 @@ public class CoffeeMaker {
      * Returns the change of a user's beverage purchase, or.
      * the user's money if the beverage cannot be made
      * @param r
-     * @param amtPaid represents the amount paided
+     * @param amtPaid 
      * @return int
      */
     public synchronized int makeCoffee(int recipeToPurchase, int amtPaid) {
