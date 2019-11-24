@@ -37,15 +37,15 @@ public class CoffeeMakerTest extends TestCase {
     r2.setAmtMilk("1");
     r2.setAmtSugar("1");
     r2.setPrice("75");
-	
-	//Set up for r3
-	r3 = new Recipe();
-	r3.setName("Latte");
-	r3.setAmtChocolate("0");
-	r3.setAmtCoffee("3");
-	r3.setAmtMilk("3");
-	r3.setAmtSugar("1");
-	r3.setPrice("100");
+
+    //Set up for r3
+    r3 = new Recipe();
+    r3.setName("Latte");
+    r3.setAmtChocolate("0");
+    r3.setAmtCoffee("3");
+    r3.setAmtMilk("3");
+    r3.setAmtSugar("1");
+    r3.setPrice("100");
 	
 	//Set up for r4
 	r4 = new Recipe();
