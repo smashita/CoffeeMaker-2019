@@ -7,6 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="CoffeeMaker_JUnit/src"/>
 	<classpathentry kind="src" path="CoffeeMaker_JUnit/unittests"/>
-	<classpathentry kind="lib" path="C:/Junit4/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/JUnit4/junit-4.13-rc-1.jar"/>
 	<classpathentry kind="output" path="CoffeeMaker_JUnit/bin"/>
 </classpath>
