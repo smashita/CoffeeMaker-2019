@@ -1,11 +1,11 @@
 package edu.ncsu.csc326.coffeemaker;
 
+import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
+import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
-import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
-import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
 
 /** this is the main of application.
  * 
