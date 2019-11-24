@@ -10,7 +10,7 @@ public class RecipeBook {
   /**
    * Default constructor for a RecipeBook.
    */
-  public RecipeBook()  {
+  public RecipeBook() {
     recipeArray = new Recipe[numRecipes];
   }
 
