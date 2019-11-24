@@ -16,9 +16,9 @@ public class Main {
   private static CoffeeMaker coffeeMaker;
 
   /**
-     * Prints the main menu and handles user input for 
-     * main menu commands.
-     */
+    * Prints the main menu and handles user input for 
+    * main menu commands.
+    */
   public static void mainMenu() {
     System.out.println("1. Add a recipe");
     System.out.println("2. Delete a recipe");
@@ -66,8 +66,8 @@ public class Main {
   }
     
   /**
-         * The add recipe user interface that process user input.
-         */
+    * The add recipe user interface that process user input.
+    */
     
   public static void addRecipe() {
     //Read in recipe name
@@ -205,16 +205,16 @@ public class Main {
   }
     
   /**
-     * Check inventory user interface that processes input.
-     */
+    * Check inventory user interface that processes input.
+    */
   public static void checkInventory() {
     System.out.println(coffeeMaker.checkInventory());
     mainMenu();
   }
     
   /**
-     * Make coffee user interface the processes input.
-     */
+    * Make coffee user interface the processes input.
+    */
   public static void makeCoffee() {
     Recipe [] recipes = coffeeMaker.getRecipes();
     for (int i = 0; i < recipes.length; i++) {

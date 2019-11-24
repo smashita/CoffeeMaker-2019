@@ -36,7 +36,7 @@ public class RecipeBook {
         exists = true;
       }
     }
-    // Asume recipe cannot be added until find an empty
+    // Assume recipe cannot be added until find an empty
     // spot
     boolean added = false;
     // Check for first empty spot in array
