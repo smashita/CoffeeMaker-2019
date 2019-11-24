@@ -7,19 +7,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/*
+/** this is the main of application.
  * 
  * @author Sarah Heckman
- *
- *Starts the console UI for the CoffeeMaker
+ *     Starts the console UI for the CoffeeMaker.
  */
 public class Main {
   private static CoffeeMaker coffeeMaker;
 
   /**
-     * Prints the main menu and handles user input for 
-     * main menu commands.
-     */
+    * Prints the main menu and handles user input for 
+    * main menu commands.
+    */
   public static void mainMenu() {
     System.out.println("1. Add a recipe");
     System.out.println("2. Delete a recipe");
@@ -31,8 +30,9 @@ public class Main {
         
     //Get user input
     try {
-      int userInput = Integer.parseInt(inputOutput("Please press the"
-          + " number that corresponds to what you would like the coffee maker to do."));
+      int userInput = Integer.parseInt(inputOutput(""
+          + "Please press the number that corresponds to"
+          + " what you would like the coffee maker to do."));
       if (userInput >= 0 && userInput <= 6) {
         if (userInput == 1) {
           addRecipe();
@@ -66,8 +66,8 @@ public class Main {
   }
     
   /**
-         * The add recipe user interface that process user input.
-         */
+    * The add recipe user interface that process user input.
+    */
     
   public static void addRecipe() {
     //Read in recipe name
@@ -205,16 +205,16 @@ public class Main {
   }
     
   /**
-     * Check inventory user interface that processes input.
-     */
+    * Check inventory user interface that processes input.
+    */
   public static void checkInventory() {
     System.out.println(coffeeMaker.checkInventory());
     mainMenu();
   }
     
   /**
-     * Make coffee user interface the processes input.
-     */
+    * Make coffee user interface the processes input.
+    */
   public static void makeCoffee() {
     Recipe [] recipes = coffeeMaker.getRecipes();
     for (int i = 0; i < recipes.length; i++) {
@@ -222,8 +222,8 @@ public class Main {
         System.out.println((i + 1) + ". " + recipes[i].getName());
       }
     }
-    int recipeToPurchase = recipeListSelection("Please select "
-        + "the number of the recipe to purchase.");
+    int recipeToPurchase = recipeListSelection("Please select the number "
+        + "of the recipe to purchase.");
     String amountPaid = inputOutput("Please enter the amount you wish to pay");
     int amtPaid = 0;
     try {
