@@ -40,7 +40,7 @@ public class Recipe {
     		amtChocolate = Integer.parseInt(chocolate);
     	} catch (NumberFormatException e) {
     		throw new RecipeException("Units of chocolate must be a positive integer");
-    	}
+    }
 		if (amtChocolate >= 0) {
 			this.amtChocolate = amtChocolate;
 		} else {
@@ -62,7 +62,7 @@ public class Recipe {
     		amtCoffee = Integer.parseInt(coffee);
     	} catch (NumberFormatException e) {
     		throw new RecipeException("Units of coffee must be a positive integer");
-    	}
+    }
 		if (amtCoffee >= 0) {
 			this.amtCoffee = amtCoffee;
 		} else {
@@ -84,7 +84,7 @@ public class Recipe {
     		amtMilk = Integer.parseInt(milk);
     	} catch (NumberFormatException e) {
     		throw new RecipeException("Units of milk must be a positive integer");
-    	}
+    }
 		if (amtMilk >= 0) {
 			this.amtMilk = amtMilk;
 		} else {
