@@ -116,7 +116,7 @@ public class Recipe {
   /** set the amount of sugar.
    * @param sugar The amtSugar to set.
    */
-  public void setAmtSugar(String sugar) throws RecipeException {
+  public void setAmtSugar(final String sugar) throws RecipeException {
     int amtSugar = 0;
     try {
       amtSugar = Integer.parseInt(sugar);
