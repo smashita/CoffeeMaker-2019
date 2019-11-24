@@ -158,7 +158,7 @@ public class Recipe {
    * @param price
    *          The price to set.
    */
-  public void setPrice(String price) throws RecipeException {
+  public void setPrice(final String price) throws RecipeException {
     int amtPrice = 0;
     try {
       amtPrice = Integer.parseInt(price);
