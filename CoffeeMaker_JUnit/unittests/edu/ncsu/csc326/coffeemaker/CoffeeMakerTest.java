@@ -73,7 +73,7 @@ public class CoffeeMakerTest extends TestCase {
 			fail("InventoryException should be thrown");
 		} catch (InventoryException e) {
 			//success if thrown
-		}
+    }
 	}
 	
 	public void testMakeCoffee() {

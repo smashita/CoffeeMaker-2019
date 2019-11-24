@@ -15,10 +15,10 @@ public class CoffeeMaker {
      * Constructor for the coffee maker
      *
      */
-	public CoffeeMaker() {
-	    recipeBook = new RecipeBook();
+  public CoffeeMaker() {
+		recipeBook = new RecipeBook();
 		inventory = new Inventory();
-	}
+  }
 	
 	/**
 	 * Returns true if the recipe is added to the

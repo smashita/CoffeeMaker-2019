@@ -39,7 +39,7 @@ public class Recipe {
     	try {
     		amtChocolate = Integer.parseInt(chocolate);
     	} catch (NumberFormatException e) {
-    		throw new RecipeException("Units of chocolate must be a positive integer");
+      throw new RecipeException("Units of chocolate must be a positive integer");
     }
 		if (amtChocolate >= 0) {
 			this.amtChocolate = amtChocolate;
@@ -61,7 +61,7 @@ public class Recipe {
     	try {
     		amtCoffee = Integer.parseInt(coffee);
     	} catch (NumberFormatException e) {
-    		throw new RecipeException("Units of coffee must be a positive integer");
+      throw new RecipeException("Units of coffee must be a positive integer");
     }
 		if (amtCoffee >= 0) {
 			this.amtCoffee = amtCoffee;
@@ -83,7 +83,7 @@ public class Recipe {
     	try {
     		amtMilk = Integer.parseInt(milk);
     	} catch (NumberFormatException e) {
-    		throw new RecipeException("Units of milk must be a positive integer");
+      throw new RecipeException("Units of milk must be a positive integer");
     }
 		if (amtMilk >= 0) {
 			this.amtMilk = amtMilk;
@@ -105,8 +105,8 @@ public class Recipe {
     	try {
     		amtSugar = Integer.parseInt(sugar);
     	} catch (NumberFormatException e) {
-    		throw new RecipeException("Units of sugar must be a positive integer");
-    	}
+      throw new RecipeException("Units of sugar must be a positive integer");
+    }
 		if (amtSugar >= 0) {
 			this.amtSugar = amtSugar;
 		} else {
@@ -141,8 +141,8 @@ public class Recipe {
     	try {
     		amtPrice = Integer.parseInt(price);
     	} catch (NumberFormatException e) {
-    		throw new RecipeException("Price must be a positive integer");
-    	}
+      throw new RecipeException("Price must be a positive integer");
+    }
 		if (amtPrice >= 0) {
 			this.price = amtPrice;
 		} else {
