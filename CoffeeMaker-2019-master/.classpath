@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="src" path="CoffeeMaker_JUnit/src"/>
 	<classpathentry kind="src" path="CoffeeMaker_JUnit/unittests"/>
+	<classpathentry kind="lib" path="C:/Junit4/junit-4.12.jar"/>
 	<classpathentry kind="output" path="CoffeeMaker_JUnit/bin"/>
 </classpath>
