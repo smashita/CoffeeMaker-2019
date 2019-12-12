@@ -236,7 +236,7 @@ public class Inventory {
    */
   public synchronized boolean useIngredients(final Recipe r) {
     if (enoughIngredients(r)) {
-      Inventory.coffee += r.getAmtCoffee();
+      Inventory.coffee -= r.getAmtCoffee();
       Inventory.milk -= r.getAmtMilk();
       Inventory.sugar -= r.getAmtSugar();
       Inventory.chocolate -= r.getAmtChocolate();
