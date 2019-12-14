@@ -119,12 +119,13 @@ public class Main {
     if (recipeToDelete < 0) {
       mainMenu();
     }
-    String recipeDeleted = coffeeMaker.deleteRecipe(recipeToDelete);
-    if (recipeDeleted != null) {
-      System.out.println(recipeDeleted + " successfully deleted.\n");
-    } else {
-      System.out.println("Selected recipe doesn't exist and could not be deleted.\n");
+    
+    for (int j = recipeToDelete ; j < recipes.length; j++) {
+      if(recipes[j] != null) {
+        recipes[j] = recipes[j + 1];
+      }
     }
+    
     mainMenu();
   }
     
@@ -158,20 +159,16 @@ public class Main {
     
     //Read in amt chocolate
     String chocolateString = inputOutput("\nPlease enter the units of chocolate in the recipe: ");
-    Recipe newRecipe = new Recipe();
+   
     try {
-      newRecipe.setPrice(priceString);
-      newRecipe.setAmtCoffee(coffeeString);
-      newRecipe.setAmtMilk(milkString);
-      newRecipe.setAmtSugar(sugarString);
-      newRecipe.setAmtChocolate(chocolateString);
-      String recipeEdited = coffeeMaker.editRecipe(recipeToEdit, newRecipe);
-      if (recipeEdited != null) {
-        System.out.println(recipeEdited + " successfully edited.\n");
-      } else {
-        System.out.println(recipeEdited + "could not be edited.\n");
-      }
+       recipes[recipeToEdit].setPrice(priceString);
+      recipes[recipeToEdit].setAmtCoffee(coffeeString);
+      recipes[recipeToEdit].setAmtMilk(milkString);
+      recipes[recipeToEdit].setAmtSugar(sugarString);
+      recipes[recipeToEdit].setAmtChocolate(chocolateString);
+      System.out.println("Successfully edited.\n");
     } catch (RecipeException e) {
+       System.out.println("could not be edited.\n");
       System.out.println(e.getMessage());
     } finally {
       mainMenu();
