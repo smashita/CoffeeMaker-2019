@@ -119,12 +119,18 @@ public class Main {
     if (recipeToDelete < 0) {
       mainMenu();
     }
-    String recipeDeleted = coffeeMaker.deleteRecipe(recipeToDelete);
+    
+    for (int j = recipeToDelete ; j < recipes.length; j++) {
+      if(recipes[j] != null) {
+        recipes[j] = recipes[j + 1];                      // replace the array with the next array to bring forward the recipe
+      }
+    }
+    /*String recipeDeleted = coffeeMaker.deleteRecipe(recipeToDelete);
     if (recipeDeleted != null) {
       System.out.println(recipeDeleted + " successfully deleted.\n");
     } else {
       System.out.println("Selected recipe doesn't exist and could not be deleted.\n");
-    }
+    }*/
     mainMenu();
   }
 
