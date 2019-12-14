@@ -1,0 +1,49 @@
+package edu.ncsu.csc326.coffeemaker;
+
+import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
+
+public class AddRecipeTest extends CoffeeMakerTest {
+
+    private CoffeeMaker cm;
+    private Recipe r1;
+
+    public void testAddRecipeTwice() throws RecipeException {
+        cm = new CoffeeMaker();
+        r1 = new Recipe();
+        r1.setName("Coffee");
+        r1.setAmtChocolate("0");
+        r1.setAmtCoffee("3");
+        r1.setAmtMilk("1");
+        r1.setAmtSugar("1");
+        r1.setPrice("15");
+        assertTrue(cm.addRecipe(r1));
+        assertFalse(cm.addRecipe(r1));
+    }
+
+    public void testAddIdenticalRecipe() throws RecipeException {
+        cm = new CoffeeMaker();
+        r1 = new Recipe();
+        assertTrue(cm.addRecipe(r1));
+
+        Recipe r5 = new Recipe();
+        r5.setAmtChocolate(String.valueOf(r1.getAmtChocolate()));
+        r5.setAmtCoffee(String.valueOf(r1.getAmtCoffee()));
+        r5.setAmtMilk(String.valueOf((r1.getAmtMilk())));
+        r5.setAmtSugar(String.valueOf((r1.getAmtSugar())));
+        r5.setPrice(String.valueOf((r1.getPrice())));
+        r5.setName((r1.getName()));
+
+        assertFalse(cm.addRecipe(r1));
+    }
+
+    public void testToString() {
+        r1 = new Recipe();
+        assertNotNull(r1.toString());
+    }
+
+    public void testHashcode() {
+        r1 = new Recipe();
+        assertNotNull(r1.hashCode());
+    }
+
+}
