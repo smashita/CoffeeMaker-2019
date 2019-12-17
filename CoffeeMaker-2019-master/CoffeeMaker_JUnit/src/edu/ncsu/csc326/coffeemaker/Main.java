@@ -147,18 +147,16 @@ public class Main {
     }
     
     //recipe list validation
-    boolean testNumber = true;
-    for (int i = 0; i < recipes.length; i++) {
-      if (recipes[i] != null) {
-        if (!(recipeToEdit != (i + 1))) {
-          testNumber = false;
-        }
+    if (recipeToEdit > 0) {
+      if (recipes[recipeToEdit] == null) {
+        System.out.println("There is no such number in the recipe!!!\n");
+        mainMenu();
       }
-    }
-    if (testNumber == false) {
+    } else if (recipes[0] == null) {
       System.out.println("There is no such number in the recipe!!!\n");
       mainMenu();
     }
+    
 
     //Read in recipe price
     String priceString = inputOutput("\nPlease enter the recipe price: $");
