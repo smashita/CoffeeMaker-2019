@@ -27,6 +27,7 @@ public class Main {
     System.out.println("5. Check inventory");
     System.out.println("6. Make coffee");
     System.out.println("0. Exit\n");
+    
         
     //Get user input
     try {
@@ -120,8 +121,8 @@ public class Main {
       mainMenu();
     }
     
-    for (int j = recipeToDelete ; j < recipes.length; j++) {
-      if(recipes[j] != null) {
+    for (int j = recipeToDelete; j < recipes.length; j++) {
+      if (recipes[j] != null) {
         recipes[j] = recipes[j + 1];
       }
     }
@@ -144,6 +145,20 @@ public class Main {
     if (recipeToEdit < 0) {
       mainMenu();
     }
+    
+    //recipe list validation
+    boolean testNumber = true;
+    for (int i = 0; i < recipes.length; i++) {
+      if (recipes[i] != null) {
+        if (!(recipeToEdit != (i + 1))) {
+          testNumber = false;
+        }
+      }
+    }
+    if (testNumber == false) {
+      System.out.println("There is no such number in the recipe!!!\n");
+      mainMenu();
+    }
 
     //Read in recipe price
     String priceString = inputOutput("\nPlease enter the recipe price: $");
@@ -161,14 +176,14 @@ public class Main {
     String chocolateString = inputOutput("\nPlease enter the units of chocolate in the recipe: ");
    
     try {
-       recipes[recipeToEdit].setPrice(priceString);
+      recipes[recipeToEdit].setPrice(priceString);
       recipes[recipeToEdit].setAmtCoffee(coffeeString);
       recipes[recipeToEdit].setAmtMilk(milkString);
       recipes[recipeToEdit].setAmtSugar(sugarString);
       recipes[recipeToEdit].setAmtChocolate(chocolateString);
       System.out.println("Successfully edited.\n");
     } catch (RecipeException e) {
-       System.out.println("could not be edited.\n");
+      System.out.println("could not be edited.\n");
       System.out.println(e.getMessage());
     } finally {
       mainMenu();

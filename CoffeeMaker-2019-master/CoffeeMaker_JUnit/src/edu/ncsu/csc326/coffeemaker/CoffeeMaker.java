@@ -90,7 +90,8 @@ public class CoffeeMaker {
    */
   public synchronized int makeCoffee(int recipeToPurchase, int amtPaid) {
     int change = 0;
-
+    
+    
     if (getRecipes()[recipeToPurchase] == null) {
       change = amtPaid;
     } else if (getRecipes()[recipeToPurchase].getPrice() <= amtPaid) {
