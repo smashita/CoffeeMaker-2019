@@ -118,7 +118,15 @@ public class Main {
     }
     int recipeToDelete = recipeListSelection("Please select the number of the recipe to delete.");
     if (recipeToDelete < 0) {
+      System.out.println("The recipe you have selected to be deleted is not exist.\n");
       mainMenu();
+    }
+    
+    if (recipeToDelete >= 0) {
+      if (recipes[recipeToDelete] == null) {
+        System.out.println("The recipe you have selected to be deleted is not exist.\n");
+        mainMenu();
+      }
     }
     
     for (int j = recipeToDelete; j < recipes.length; j++) {
@@ -229,36 +237,36 @@ public class Main {
     Recipe [] recipes = coffeeMaker.getRecipes();
     int counter = 0;
     for (int i = 0; i < recipes.length; i++) {
-    	if (recipes[i]==null) {
-    		counter ++;
-    	}	
+      if (recipes[i] == null) {
+        counter++;
+      }	
     }
-    if ( counter == recipes.length){
-    	System.out.println("No recipes in the recipeBook yet.");
-    }else {
-    	for (int i = 0; i < recipes.length; i++) {
-    	   if (recipes[i] != null) {
-    	     System.out.println((i + 1) + ". " + recipes[i].getName());
-    	   }
-    	}
-    	int recipeToPurchase = recipeListSelection("Please select the number "
-    	    + "of the recipe to purchase.");
-    	String amountPaid = inputOutput("Please enter the amount you wish to pay");
-    	int amtPaid = 0;
-    	try {
-    	   amtPaid = Integer.parseInt(amountPaid);
-    	} catch (NumberFormatException e) {
-    	   System.out.println("Please enter a positive integer");
-    	   mainMenu();
-    	} 
-    	  int change = coffeeMaker.makeCoffee(recipeToPurchase, amtPaid);
-    	if (change == amtPaid) {
-    	   System.out.println("Insufficient funds to purchase.");
-    	} else {
-    	   System.out.println("Thank you for purchasing " 
-    	      + coffeeMaker.getRecipes()[recipeToPurchase].getName());
-    	}
-    	System.out.println("Your change is: " + change + "\n");
+    if (counter == recipes.length) {
+      System.out.println("No recipes in the recipeBook yet.");
+    } else {
+      for (int i = 0; i < recipes.length; i++) {
+        if (recipes[i] != null) {
+          System.out.println((i + 1) + ". " + recipes[i].getName());
+        }
+      }
+      int recipeToPurchase = recipeListSelection("Please select the number "
+          + "of the recipe to purchase.");
+      String amountPaid = inputOutput("Please enter the amount you wish to pay");
+      int amtPaid = 0;
+      try {
+        amtPaid = Integer.parseInt(amountPaid);
+      } catch (NumberFormatException e) {
+        System.out.println("Please enter a positive integer");
+        mainMenu();
+      } 
+      int change = coffeeMaker.makeCoffee(recipeToPurchase, amtPaid);
+      if (change == amtPaid) {
+        System.out.println("Insufficient funds to purchase.");
+      } else {
+        System.out.println("Thank you for purchasing " 
+            + coffeeMaker.getRecipes()[recipeToPurchase].getName());
+      }
+      System.out.println("Your change is: " + change + "\n");
     }
     mainMenu();
   }
