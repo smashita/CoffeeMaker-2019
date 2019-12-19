@@ -301,13 +301,13 @@ public class Main {
     int recipe = 0;
     try {
       recipe = Integer.parseInt(userSelection) - 1;
-      if (recipe >= 0 && recipe <= 2) {
+      if (recipe >= 0 && recipe <= 3) {
         //do nothing here.
       } else {
         recipe = -1;
       }
     } catch (NumberFormatException e) {
-      System.out.println("Please select a number from 1-3.");
+      System.out.println("Please select a number from 1-4.");
       recipe = -1;
     }
     return recipe;
