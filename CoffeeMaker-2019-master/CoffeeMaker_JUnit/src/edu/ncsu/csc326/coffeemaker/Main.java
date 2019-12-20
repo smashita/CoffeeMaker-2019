@@ -237,14 +237,15 @@ public class Main {
     for (int i = 0; i < recipes.length; i++) {
       if (recipes[i] == null) {
         counter++;
-      }	
+      }
     }
     if (counter == recipes.length) {
       System.out.println("No recipes in the recipeBook yet.");
     } else {
       for (int i = 0; i < recipes.length; i++) {
         if (recipes[i] != null) {
-          System.out.println((i + 1) + ". " + recipes[i].getName() + " "+"price: RM"+ recipes[i].getPrice() );
+          System.out.println((i + 1) + ". " + recipes[i].getName() 
+              + " " + "price: RM" + recipes[i].getPrice());
         }
       } 
       int recipeToPurchase = recipeListSelection("Please select the number "
