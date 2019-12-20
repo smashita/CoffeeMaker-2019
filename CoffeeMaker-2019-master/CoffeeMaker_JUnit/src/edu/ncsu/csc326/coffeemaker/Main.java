@@ -164,28 +164,26 @@ public class Main {
       System.out.println("There is no such number in the recipe!!!\n");
       mainMenu();
     }
-    
-
-    //Read in recipe price
-    String priceString = inputOutput("\nPlease enter the recipe price: $");
-    
-    //Read in amt coffee
-    String coffeeString = inputOutput("\nPlease enter the units of coffee in the recipe: ");
-
-    //Read in amt milk
-    String milkString = inputOutput("\nPlease enter the units of milk in the recipe: ");
-    
-    //Read in amt sugar
-    String sugarString = inputOutput("\nPlease enter the units of sugar in the recipe: ");
-    
-    //Read in amt chocolate
-    String chocolateString = inputOutput("\nPlease enter the units of chocolate in the recipe: ");
-   
+  
     try {
+      //Read in recipe price
+      String priceString = inputOutput("\nPlease enter the recipe price: $");
       recipes[recipeToEdit].setPrice(priceString);
+  	
+      //Read in amt coffee
+      String coffeeString = inputOutput("\nPlease enter the units of coffee in the recipe: ");
       recipes[recipeToEdit].setAmtCoffee(coffeeString);
+  	
+      //Read in amt milk
+      String milkString = inputOutput("\nPlease enter the units of milk in the recipe: ");
       recipes[recipeToEdit].setAmtMilk(milkString);
+  	
+      //Read in amt sugar
+      String sugarString = inputOutput("\nPlease enter the units of sugar in the recipe: ");
       recipes[recipeToEdit].setAmtSugar(sugarString);
+  	
+      //Read in amt chocolate
+      String chocolateString = inputOutput("\nPlease enter the units of chocolate in the recipe: ");
       recipes[recipeToEdit].setAmtChocolate(chocolateString);
       System.out.println("Successfully edited.\n");
     } catch (RecipeException e) {
