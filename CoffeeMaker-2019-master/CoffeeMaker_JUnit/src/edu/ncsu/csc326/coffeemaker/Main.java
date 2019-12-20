@@ -246,11 +246,11 @@ public class Main {
     } else {
       for (int i = 0; i < recipes.length; i++) {
         if (recipes[i] != null) {
-          System.out.println((i + 1) + ". " + recipes[i].getName());
+          System.out.println((i + 1) + ". " + recipes[i].getName() + " "+"price: RM"+ recipes[i].getPrice() );
         }
-      }
+      } 
       int recipeToPurchase = recipeListSelection("Please select the number "
-          + "of the recipe to purchase.");
+          + "of the recipe to purchase.");  
       String amountPaid = inputOutput("Please enter the amount you wish to pay");
       int amtPaid = 0;
       try {
@@ -265,8 +265,8 @@ public class Main {
       } else {
         System.out.println("Thank you for purchasing " 
             + coffeeMaker.getRecipes()[recipeToPurchase].getName());
+        System.out.println("Your change is: " + change + "\n");
       }
-      System.out.println("Your change is: " + change + "\n");
     }
     mainMenu();
   }
