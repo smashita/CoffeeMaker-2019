@@ -77,15 +77,30 @@ public class Main {
     String name = inputOutput("\nPlease enter the recipe name: ");
     //Read in recipe price
     String priceString = inputOutput("\nPlease enter the recipe price: $");
+    do {
+      priceString = inputOutput("\nThe price must be positive!. Please re-enter the recipe price: $");	
+    }while(Integer.parseInt(priceString) <0);   
     //Read in amt coffee
     String coffeeString = inputOutput("\nPlease enter the units of coffee in the recipe: ");
+    do {
+    	coffeeString = inputOutput("\nThe unit must be positive!. Please re-enter the units: $");	
+    }while(Integer.parseInt(coffeeString) <0);
     //Read in amt milk
     String milkString = inputOutput("\nPlease enter the units of milk in the recipe: ");
+    do {
+    	milkString = inputOutput("\nThe unit must be positive!. Please re-enter the units: $");	
+    }while(Integer.parseInt(milkString) <0);
     //Read in amt sugar
     String sugarString = inputOutput("\nPlease enter the units of sugar in the recipe: ");
+    do {
+    	sugarString = inputOutput("\nThe unit must be positive!. Please re-enter the units: $");	
+    }while(Integer.parseInt(sugarString) <0);
     //Read in amt chocolate
     String chocolateString = inputOutput("\nPlease enter the units of chocolate in the recipe: ");
-        
+    do {
+    	chocolateString = inputOutput("\nThe unit must be positive!. Please re-enter the units: $");	
+    }while(Integer.parseInt(chocolateString) <0);
+    
     Recipe r = new Recipe();
     try {
       r.setName(name);
