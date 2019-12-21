@@ -6,6 +6,8 @@ import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 /** this is the main of application.
  * 
@@ -199,27 +201,50 @@ public class Main {
    */
     
   public static void addInventory() {
-    //Read in amt coffee
-    String coffeeString = inputOutput("\nPlease enter the units of coffee to add: ");
-
-    //Read in amt milk
-    String milkString = inputOutput("\nPlease enter the units of milk to add: ");
-      
-    //Read in amt sugar
-    String sugarString = inputOutput("\nPlease enter the units of sugar to add: ");
-    
-    //Read in amt chocolate
-    String chocolateString = inputOutput("\nPlease enter the units of chocolate to add: ");
+    boolean flag = true;
     try {
+    String coffeeString = "", milkString = "", sugarString = "", chocolateString = "";
+    while (flag==true) {
+
+      //Read in amt coffee
+      coffeeString = inputOutput("\nPlease enter the units of coffee to add: ");
+      if (Integer.parseInt(coffeeString)<0) {
+        flag = false;
+        break;
+      }
+
+      //Read in amt milk
+      milkString = inputOutput("\nPlease enter the units of milk to add: ");
+      if (Integer.parseInt(milkString)<0) {
+        flag = false; break;
+      }
+
+      //Read in amt sugar
+      sugarString = inputOutput("\nPlease enter the units of sugar to add: ");
+      if (Integer.parseInt(sugarString)<0) {
+        flag = false; break;
+      }
+
+      //Read in amt chocolate
+      chocolateString = inputOutput("\nPlease enter the units of chocolate to add: ");
+      if (Integer.parseInt(chocolateString)<0) {
+        flag = false; break;
+      }
+      // if flag continues to be true
       coffeeMaker.addInventory(coffeeString, milkString, sugarString, chocolateString);
-      System.out.println("Inventory successfully added");
-    } catch (InventoryException e) {
-      System.out.println("Inventory was not added");
-    } finally {
-      mainMenu();
+      System.out.println("Inventory successfully added"); flag = false; mainMenu();
     }
+        } catch (NumberFormatException | InventoryException e) {
+          System.out.println("\n");
+        } finally {
+          flag = false;
+          if (!false) {
+          System.out.println("Inventory was not added");
+          System.out.println("-- Please enter a positive int only and not char or string...");
+          addInventory();
+          mainMenu();}
+        }
   }
-    
   /**
     * Check inventory user interface that processes input.
     */
@@ -227,7 +252,7 @@ public class Main {
     System.out.println(coffeeMaker.checkInventory());
     mainMenu();
   }
-    
+
   /**
     * Make coffee user interface the processes input.
     */
@@ -244,12 +269,12 @@ public class Main {
     } else {
       for (int i = 0; i < recipes.length; i++) {
         if (recipes[i] != null) {
-          System.out.println((i + 1) + ". " + recipes[i].getName() 
+          System.out.println((i + 1) + ". " + recipes[i].getName()
               + " " + "price: RM" + recipes[i].getPrice());
         }
-      } 
+      }
       int recipeToPurchase = recipeListSelection("Please select the number "
-          + "of the recipe to purchase.");  
+          + "of the recipe to purchase.");
       String amountPaid = inputOutput("Please enter the amount you wish to pay");
       int amtPaid = 0;
       try {
@@ -257,21 +282,21 @@ public class Main {
       } catch (NumberFormatException e) {
         System.out.println("Please enter a positive integer");
         mainMenu();
-      } 
+      }
       int change = coffeeMaker.makeCoffee(recipeToPurchase, amtPaid);
       if (change == amtPaid) {
         System.out.println("Insufficient funds to purchase.");
       } else {
-        System.out.println("Thank you for purchasing " 
+        System.out.println("Thank you for purchasing "
             + coffeeMaker.getRecipes()[recipeToPurchase].getName());
         System.out.println("Your change is: " + change + "\n");
       }
     }
     mainMenu();
   }
-    
+
   /**
-   * Passes a prompt to the user and returns the user specified 
+   * Passes a prompt to the user and returns the user specified
    * string.
    * @param message represent prompt
    * @return String
@@ -288,7 +313,16 @@ public class Main {
     }
     return returnString;
   }
-    
+
+
+//  private static String inputInt(String message) {
+//  try {
+//    digit = newScan.nextInt()
+//  } catch (InputMismatchException e) {
+//    e.printStackTrace();
+//    System.err.println("Entered value is not an integer");
+//  }
+
   /**
    * Passes a prompt to the user that deals with the recipe list
    * and returns the user selected number.
@@ -311,7 +345,7 @@ public class Main {
     }
     return recipe;
   }
-    
+
   /**
    * Starts the coffee maker program.
    * @param args represent arguments
