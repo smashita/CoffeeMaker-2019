@@ -80,7 +80,7 @@ public class Main {
     String priceString = inputOutput("\nPlease enter the recipe price: $");
     do {
       priceString = inputOutput("\nThe price must be positive!. Please re-enter the recipe price: $");	
-    }while(StringUtils.isNumeric(priceString);   
+    }while(!StringUtils.isNumeric(priceString);   
     //Read in amt coffee
     String coffeeString = inputOutput("\nPlease enter the units of coffee in the recipe: ");
     do {
