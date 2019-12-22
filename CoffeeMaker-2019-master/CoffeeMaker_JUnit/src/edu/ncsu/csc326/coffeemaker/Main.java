@@ -172,12 +172,15 @@ public class Main {
     }
     
     //recipe list validation
-    if (recipeToEdit > 0) {
-      if (recipes[recipeToEdit] == null) {
-        System.out.println("There is no such number in the recipe!!!\n");
-        mainMenu();
+    boolean test = true;
+    for (int i = 0; i < recipes.length; i++) {
+      if (recipes[i] != null) {
+        if (!(recipeToEdit != (i + 1))) {
+          test = false;
+        }
       }
-    } else if (recipes[0] == null) {
+    }
+    if (test == false) {
       System.out.println("There is no such number in the recipe!!!\n");
       mainMenu();
     }
