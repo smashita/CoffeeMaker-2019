@@ -290,7 +290,10 @@ public class Main {
       }
       int recipeToPurchase = recipeListSelection("Please select the number "
           + "of the recipe to purchase.");
-      String amountPaid = inputOutput("Please enter the amount you wish to pay");
+      String amountPaid ="";
+      if (recipeToPurchase != -1) {
+    	  amountPaid = inputOutput("Please enter the amount you wish to pay");
+      }
       int amtPaid = 0;
       try {
         amtPaid = Integer.parseInt(amountPaid);
@@ -306,6 +309,7 @@ public class Main {
             + coffeeMaker.getRecipes()[recipeToPurchase].getName());
         System.out.println("Your change is: " + change + "\n");
       }
+      
     }
     mainMenu();
   }
@@ -345,13 +349,16 @@ public class Main {
    * @return int
    */
   private static int recipeListSelection(String message) {
-    String userSelection = inputOutput(message);
+	  Recipe [] recipes = coffeeMaker.getRecipes();
+	  String userSelection = inputOutput(message);
     int recipe = 0;
     try {
       recipe = Integer.parseInt(userSelection) - 1;
-      if (recipe >= 0 && recipe <= 3) {
-        //do nothing here.
-      } else {
+      if (recipes[recipe] != null) {
+    	  //do nothing
+      }
+      else {
+    	System.out.println("recipe selected not in the system");
         recipe = -1;
       }
     } catch (NumberFormatException e) {
