@@ -1,5 +1,6 @@
 package edu.ncsu.csc326.coffeemaker;
 
+import org.apache.commons.lang3.StringUtils;
 import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
 import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
 
@@ -79,27 +80,27 @@ public class Main {
     String priceString = inputOutput("\nPlease enter the recipe price: $");
     do {
       priceString = inputOutput("\nThe price must be positive!. Please re-enter the recipe price: $");	
-    }while(Integer.parseInt(priceString) <0);   
+    }while(!StringUtils.isNumeric(priceString);   
     //Read in amt coffee
     String coffeeString = inputOutput("\nPlease enter the units of coffee in the recipe: ");
     do {
     	coffeeString = inputOutput("\nThe unit must be positive!. Please re-enter the units: $");	
-    }while(Integer.parseInt(coffeeString) <0);
+    }while(!StringUtils.isNumeric(coffeeString);
     //Read in amt milk
     String milkString = inputOutput("\nPlease enter the units of milk in the recipe: ");
     do {
     	milkString = inputOutput("\nThe unit must be positive!. Please re-enter the units: $");	
-    }while(Integer.parseInt(milkString) <0);
+    }while(!StringUtils.isNumeric(milkString);
     //Read in amt sugar
     String sugarString = inputOutput("\nPlease enter the units of sugar in the recipe: ");
     do {
     	sugarString = inputOutput("\nThe unit must be positive!. Please re-enter the units: $");	
-    }while(Integer.parseInt(sugarString) <0);
+    }while(!StringUtils.isNumeric(sugarString);
     //Read in amt chocolate
     String chocolateString = inputOutput("\nPlease enter the units of chocolate in the recipe: ");
     do {
     	chocolateString = inputOutput("\nThe unit must be positive!. Please re-enter the units: $");	
-    }while(Integer.parseInt(chocolateString) <0);
+    }while(!StringUtils.isNumeric(chocolateString);
     
     Recipe r = new Recipe();
     try {
